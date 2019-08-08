@@ -2,6 +2,7 @@
 
 ## From mobile to web
 
+### Steps
 - First create a flutter web project from vscode
 - Copy the entire lib folder from mobile project to web project
 - web/Assets folder should create from the scratch
