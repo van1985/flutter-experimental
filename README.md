@@ -6,6 +6,8 @@ Flutter is a great way to build mobile apps for iOS and Android from a single co
 
 ## Create Flutter Mobile Project from scratch
 
+### Steps
+- 
 
 
 ## From mobile to web
@@ -33,8 +35,62 @@ Flutter is a great way to build mobile apps for iOS and Android from a single co
 
 ## From mobile to desktop
 
+### Prerequisites
+
+For Flutter to run on Desktop, we must be on the master channel, with the latest release. To ensure the same, fire up a terminal and run the following commands.
+
+```
+flutter channel master
+flutter upgrade
+```
+
+Now if we run
+
+```
+flutter doctor
+```
+
+you can see:
+
+![Flutter doctor console](/images/console-flutter-doctor.png)
+
+
+For enable desktop , you should run:
+
+On macOS or Linux:
+
+```
+export ENABLE_FLUTTER_DESKTOP=true
+```
+
+On Windows:
+PowerShell:
+
+```
+$env:ENABLE_FLUTTER_DESKTOP="true"
+```
+
+CMD:
+
+```
+set ENABLE_FLUTTER_DESKTOP=true
+```
+
+Please note that this sets the environment variable for the current terminal session, hence we will be doing all the future steps in this terminal itself. Now, let’s run the following command to ensure that our system shows up.
+
+```
+flutter devices
+```
+
 ### Steps
-- Copy example folder
+- Go to a terminar and run:
+```
+git clone https://github.com/google/flutter-desktop-embedding.git
+cd example
+flutter packages get
+```
+
+- Copy example folder like your desktop root project
 - Change the name
 - Delete "build" folder if exist
 - Copy lib folder from mobile project to desktop project
